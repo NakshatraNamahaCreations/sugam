@@ -1,0 +1,23 @@
+node_modules
+.next
+out
+.env*.local
+
+# Source masters. Kept on disk, deliberately out of the repository: v1.mp4 is
+# 574 MB and the project film 202 MB, both far past GitHub's 100 MB file limit,
+# and none of them are served. The web derivatives in public/clips, public/plant,
+# public/stages, public/types, public/apps and public/gallery are what the site
+# actually loads, and those are committed.
+/public/v1.mp4
+/public/v2.mp4
+/public/Final Marge video*.mp4
+/public/WhatsApp*
+/public/ChatGPT*
+/public/sugam images/
+/public/img1.png
+/public/banner.png
+/public/clips/type-*
+
+# editor / OS
+.DS_Store
+Thumbs.db
