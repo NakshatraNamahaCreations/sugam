@@ -568,6 +568,21 @@ footer .brand .mark{width:200px;height:94px}
 }
 .morph svg{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .55s var(--ease)}
 .morph svg.on{opacity:1}
+
+/* photograph layers, stacked like the drawn ones: without these every layer
+   stays visible and the last one in the DOM covers the rest */
+.morph .shot{position:absolute;inset:0;opacity:0;transition:opacity .55s var(--ease)}
+.morph .shot.on{opacity:1}
+.morph .shot img{object-fit:cover}
+/* over a photograph the pale foot gradient disappears, so it goes dark */
+.morph.photo .state{
+  background:linear-gradient(0deg,rgba(6,9,12,.9) 26%,rgba(6,9,12,.5) 64%,rgba(6,9,12,0));
+  color:rgba(255,255,255,.78)
+}
+.morph.photo .state b{color:#FF6377}
+.morph.photo .ticks i{background:rgba(255,255,255,.28)}
+.morph.photo .ticks i.on{background:#FF6377}
+.morph.photo .sheet-id{color:rgba(255,255,255,.75)}
 .morph .state{
   position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px 20px;
   display:flex;align-items:center;justify-content:space-between;gap:16px;
