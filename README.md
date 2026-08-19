@@ -336,14 +336,33 @@ lands before anyone reads a row: 20–30% lower cost, hours not weeks, 60–75
 year life. They come from `COMPARISON_HIGHLIGHTS` in `data/site.js`, beside
 the rows they summarise.
 
-Each row is numbered, and both tracks are **named in the row** — "Corrugated"
-and "RCC / precast" — rather than relying on the legend and colour alone.
-Rows tint on hover.
+### The dial
+
+The six measures are set along an arc rather than stacked as rows: numbers
+seated on a circle of radius 318 centred off to the right, sweeping 213° to
+147° so 01 sits at the top, each tilted with the curve. The live measure's
+number is pulled into the centre at up to 92 px with its label beside it, and
+its two tracks run in the right half.
+
+It cycles every 4.2 s once the section is in view, and stops for good the
+moment someone picks a measure — an autoplaying carousel that keeps moving
+under a reader is worse than none. The measures are a `tablist`: arrow keys
+step through them, and only the live one is in the tab order.
+
+Below 820 px the arc is dropped entirely — a 318 px radius does not fit a
+phone — and the numbers become a plain row of chips above the readout.
+
+Both tracks are **named in place** — "Corrugated" and "RCC / precast" — rather
+than relying on the legend and colour alone.
 
 The empty track carries `rgba(11,14,17,.14)`. It was `--paper-3`, which
 measured 1.10:1 against the tinted section ground — invisible, which meant the
 100% reference the bars are read against could not be seen. It is now 1.35:1,
 with the red bar at 4.03:1 over it.
+
+**Trade-off worth knowing:** the old layout showed all six measures at once.
+The dial shows one. It reads far better, but a reader comparing cost against
+foundation demand now has to click between them.
 
 ## Applications carousel
 

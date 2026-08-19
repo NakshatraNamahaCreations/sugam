@@ -80,6 +80,17 @@ export default function Footer() {
 
         <div className="fbot">
           <span>&copy; {new Date().getFullYear()} Sugam Met Tech (P) Ltd. All rights reserved.</span>
+          <span>
+            Designed and developed by{' '}
+            <a
+              className="credit"
+              href="https://www.nakshatranamahacreations.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Nakshatra Namaha Creations
+            </a>
+          </span>
         </div>
       </div>
     </footer>
